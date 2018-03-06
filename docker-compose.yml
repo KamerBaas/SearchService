@@ -1,4 +1,8 @@
 version: "2"
+
+volumes:
+  data-volume:
+
 services:
   app:
     container_name: kb-search
@@ -12,6 +16,6 @@ services:
     container_name: mongo
     image: mongo
     volumes:
-      - ./data:/data/db
+      - data-volume:/data/db
     ports:
       - "27017:27017"
