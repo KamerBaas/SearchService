@@ -1,0 +1,16 @@
+{
+  "name": "kb-search",
+  "version": "1.0.0",
+  "description": "Search service for KamerBaas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "author": "Jaap Weijland",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9"
+  }
+}
