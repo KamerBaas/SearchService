@@ -39,10 +39,11 @@ app.post('/profile', (req, res) => {
     if(!req.body.profile || !req.body.profile.objectID){
         res.status(400).send('Please provide req.body.profile with property objectID');
     }
-    const profile = req.body.profile;
+    
     console.log('profile:');
     console.log(profile);
     console.log(req.body);
+    const profile = req.body.profile;
     client.initIndex('profiles').partialUpdateObject(profile);
     res.ok();
 })
