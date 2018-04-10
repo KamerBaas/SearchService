@@ -4,11 +4,11 @@ const algoliasearch = require('algoliasearch');
 
 const client = algoliasearch('8HYBSNX4Q5', '5d225d11ef765b21fb13bc97688801ef');
 
-mongoose.connect('mongodb://mongo:27017').then((res) => {
-    console.log(res);
-}).catch((err) => {
-    console.log(err.message);
-});
+// mongoose.connect('mongodb://mongo:27017').then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err.message);
+// });
 
 // Constants
 const PORT = 8080;
@@ -34,6 +34,10 @@ app.post('/profile', (req, res) => {
     const profile = req.body.profile;
     client.initIndex('profiles').partialUpdateObject();
 })
+
+app.get('/ping', (req, res) => {
+    res.send('Search service is healthy');
+});
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
