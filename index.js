@@ -45,7 +45,7 @@ app.post('/profile', (req, res) => {
     console.log(req.body);
     const profile = req.body.profile;
     client.initIndex('profiles').partialUpdateObject(profile);
-    res.ok();
+    res.sendStatus(200);
 })
 
 app.get('/ping', (req, res) => {
