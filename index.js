@@ -41,7 +41,7 @@ app.post('/profile', (req, res) => {
     }
     
     console.log('profile:');
-    console.log(profile);
+    //console.log(profile);
     console.log(req.body);
     const profile = req.body.profile;
     client.initIndex('profiles').partialUpdateObject(profile);
