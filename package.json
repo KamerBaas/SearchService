@@ -13,6 +13,7 @@
     "algoliasearch": "^3.25.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.9",
-    "request": "latest"
+    "request": "latest",
+    "crypto": "latest"
   }
 }
